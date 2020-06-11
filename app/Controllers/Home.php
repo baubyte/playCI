@@ -42,7 +42,16 @@ class Home extends BaseController
 			'name'=>"TEST 1",
 			'email'=>"test1@gmail.com"
 		];
-		$userModel->save($data);
+		//$userModel->save($data);
+		/**SOFT Para DELETE */
+		//$userModel->delete(8);
+		/**Para DELETE Multiple */
+		//$userModel->delete([9,10]);
+		/**SOFT DELETE con WHERE */
+		//$userModel->where('id',11)->delete();
+		/**Purgando DELETE Elimina Completamente*/
+		//$userModel->purgeDeleted();
+		
 		$users = array('users'=>$users);
 		return view('estructura/header').view('estructura/body',$users);
 	}
