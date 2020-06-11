@@ -39,10 +39,13 @@ class Home extends BaseController
 		/**SAVE si encuentra el ID hace un UPDATE caso Contrario hace unn INSERT */
 		$data=[
 			//'id'=>7,
-			'name'=>"TEST 1",
-			'email'=>"test1@gmail.com"
+			'name'=>"TEST 2",
+			'email'=>"test2@gmail.com"
 		];
-		//$userModel->save($data);
+		if($userModel->save($data)===false)
+		{
+			var_dump($userModel->errors());
+		}
 		/**SOFT Para DELETE */
 		//$userModel->delete(8);
 		/**Para DELETE Multiple */
