@@ -38,7 +38,7 @@ class Home extends BaseController
 		->update();*/
 		/**SAVE si encuentra el ID hace un UPDATE caso Contrario hace unn INSERT */
 		$data=[
-			'id'=>7,
+			//'id'=>7,
 			'name'=>"TEST 1",
 			'email'=>"test1@gmail.com"
 		];
